@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
-  weight: '400',
+  weight: ['400', '500'],
   variable: '--font-inter',
 });
 

@@ -1,28 +1,48 @@
 'use client';
 
-import { MdArrowBack } from 'react-icons/md';
-import { PiPackage } from 'react-icons/pi';
-import { TbPencil } from 'react-icons/tb';
-import { IoAdd } from 'react-icons/io5';
+import { useEffect, useState } from 'react';
 import AddNewProduct from './components/product-list/AddNewProduct';
 import AddProduct from './components/product-list/AddProduct';
 import Image from 'next/image';
-import { useState } from 'react';
 import Modal from './components/ui/Modal';
+import { TbPencil } from 'react-icons/tb';
+import { LuSearch } from 'react-icons/lu';
+import { LiaUploadSolid } from 'react-icons/lia';
 export default function Home() {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
 
-  const categoryClasses = 'py-1 px-3 md:px-4 md:py-2 border border-mainWhite rounded-xl whitespace-nowrap';
+  const categoryClasses =
+    'py-1 px-3 md:px-4 md:py-2 border border-mainWhite rounded-xl whitespace-nowrap cursor-pointer';
 
   const handleShowModal = () => {
-    setShowModal(prev => !prev);
-  }
+    setShowModal((prev) => !prev);
+  };
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+
+    if (showModal) body.classList.add('active');
+    else body.classList.remove('active');
+  }, [showModal]);
 
   return (
     <>
       <section className='container'>
-        <header></header>
-        <div className='mb-6 flex items-center overflow-auto rounded-xl bg-mainGrey px-4 py-4 md:px-8 md:py-4'>
+        <header className='min-[360px]:flex sm:flex-row justify-between mb-8 gap-4'>
+          <div className='relative max-w-[255px] mb-4 min-[360px]:m-0'>
+            <input type='text' placeholder='Search product' className='pr-10' />
+            <LuSearch
+              style={{ width: '20px', height: '20px' }}
+              className='absolute top-3 right-3 text-[#aa5afa] pointer-events-none'
+            />
+          </div>
+          <button className='flex gap-2 py-2 px-6 md:py-[10px] md:px-9 border items-center border-secWhite rounded-[4px]'>
+            <LiaUploadSolid style={{ width: '16px', height: '16px' }} />
+            Import
+          </button>
+        </header>
+
+        <div className='mb-6 flex items-center overflow-auto rounded-xl bg-mainGrey px-4 py-4 md:px-8 md:py-4 text-sm'>
           <span className='mr-3'>Category</span>
           <ul className='mr-6 flex gap-3'>
             <li className={categoryClasses}>
@@ -50,7 +70,7 @@ export default function Home() {
               width={196}
               height={153}
               alt='Product-Image'
-              className='mb-3 max-h-[153px] w-full rounded-lg object-contain'
+              className='mb-3 max-h-[153px] w-full rounded-lg object-cover'
             />
             <h2 className='product-card-title mb-[13px] font-bold'>
               Pack of Beer (6pcs of heineken)
@@ -61,10 +81,9 @@ export default function Home() {
             </p>
             <span className='block text-sm font-bold'>6pcs</span>
           </div>
-
           <AddProduct handleShowModal={handleShowModal} />
           <AddNewProduct handleShowModal={handleShowModal} />
-          {showModal && <Modal />}
+          {showModal && <Modal handleShowModal={handleShowModal} />}
         </main>
       </section>
     </>
