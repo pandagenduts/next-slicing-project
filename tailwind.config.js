@@ -10,12 +10,13 @@ module.exports = {
       center: true,
       padding: '1rem',
       screens: {
-        "xl": "1018px",
+        xl: '1018px',
       },
     },
     extend: {
       backgroundImage: {
-        'gradient-1': 'linear-gradient(2deg, #101010 79.11%, rgba(0, 0, 0, 0.00) 103.73%, rgba(0, 0, 0, 0.00) 103.73%), linear-gradient(174deg, #A060FA 17.25%, #C800CC 58.14%)',
+        'gradient-1':
+          'linear-gradient(2deg, #101010 79.11%, rgba(0, 0, 0, 0.00) 103.73%, rgba(0, 0, 0, 0.00) 103.73%), linear-gradient(174deg, #A060FA 17.25%, #C800CC 58.14%)',
       },
       colors: {
         mainPurple: 'var(--main-purple)',
@@ -30,10 +31,10 @@ module.exports = {
         lightGrey5: 'var(--sec-light-grey-5)',
       },
       fontFamily: {
-        inter: "var(--font-inter)",
-        poppins: "var(--font-poppins)",
+        inter: 'var(--font-inter)',
+        poppins: 'var(--font-poppins)',
       },
     },
   },
   plugins: [],
-}
+};
