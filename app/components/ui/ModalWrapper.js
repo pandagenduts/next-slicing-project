@@ -8,7 +8,7 @@ export default function ModalWrapper(props) {
   };
 
   return (
-    <div className='fixed top-0 left-0 z-20 w-screen h-screen flex justify-center items-center px-4 py-8'>
+    <div className='fixed top-0 left-0 z-20 w-full h-full flex justify-center items-center px-4 py-8'>
       <div
         id='overlay'
         className='absolute top-0 left-0 w-full h-full bg-modalOverlay'
