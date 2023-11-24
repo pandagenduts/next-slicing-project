@@ -128,7 +128,7 @@ export default function Modal(props) {
           </div>
         </section>
 
-        <section className='flex justify-between'>
+        <section id='variant' className='flex justify-between'>
           <p>Enable Variant</p>
           <Switch />
         </section>
