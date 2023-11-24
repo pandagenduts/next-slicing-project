@@ -3,25 +3,38 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  --main-purple: #AB5CFA;
+  --main-orange: #EF9533;
+  --main-grey: #1E1E1E;
+  --main-white: #FCFCFC;
+  --main-magenta: #C801CC;
+  --sec-light-grey-1: #898E9A;
+  --sec-light-grey-2: #333;
+  --sec-light-grey-3: #313131;
+  --sec-light-grey-4: #262626;
+  --sec-light-grey-5: #222;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(2deg, #101010 79.11%, rgba(0, 0, 0, 0.00) 103.73%, rgba(0, 0, 0, 0.00) 103.73%), linear-gradient(174deg, #A060FA 17.25%, #C800CC 58.14%);
+  background-repeat: no-repeat;
+
+  color: var(--main-white);
+}
+
+.nav-item {
+  box-shadow: inset 0px 4px 0px var(--sec-light-grey-4);
+}
+
+.nav-item:hover {
+  box-shadow: inset 0px 4px 0px var(--main-orange);
+  color: var(--main-orange);
+}
+
+.nav-active {
+  box-shadow: inset 0px 4px 0px var(--main-orange);
+  color: var(--main-orange);
 }
