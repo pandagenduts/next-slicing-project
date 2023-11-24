@@ -20,7 +20,7 @@ export default function ModalWrapper(props) {
       >
         <div className='p-[20px] mb-4 purple-gradient rounded-lg min-[1160px]:w-[220px] min-[1160px]:absolute min-[1160px]:top-0 min-[1160px]:-right-[247px]'>
           <h4 className='mb-4 font-bold'>Looking for variant ?</h4>
-          <p className='mb-4 text-sm'>Don't worry!!</p>
+          <p className='mb-4 text-sm'>Don&rsquo;t worry!!</p>
           <p className='text-sm'>
             size, sugar level, ice level will be unlocked if you already
             approved by admin.
