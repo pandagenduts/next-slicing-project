@@ -3,23 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --main-purple: #AB5CFA;
-  --main-orange: #EF9533;
-  --main-grey: #1E1E1E;
-  --main-white: #FCFCFC;
-  --main-magenta: #C801CC;
-  --sec-light-grey-1: #898E9A;
+  --main-purple: #ab5cfa;
+  --main-orange: #ef9533;
+  --main-grey: #1e1e1e;
+  --main-white: #fcfcfc;
+  --main-magenta: #c801cc;
+  --sec-light-grey-1: #898e9a;
   --sec-light-grey-2: #333;
   --sec-light-grey-3: #313131;
   --sec-light-grey-4: #262626;
   --sec-light-grey-5: #222;
 
-  --font-inter: 'Inter', sans-serif;
-  --font-poppins: 'Poppins', sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 body {
-  background: linear-gradient(2deg, #101010 79.11%, rgba(0, 0, 0, 0.00) 103.73%, rgba(0, 0, 0, 0.00) 103.73%), linear-gradient(174deg, #A060FA 17.25%, #C800CC 58.14%);
+  background: linear-gradient(
+      2deg,
+      #101010 79.11%,
+      rgba(0, 0, 0, 0) 103.73%,
+      rgba(0, 0, 0, 0) 103.73%
+    ),
+    linear-gradient(174deg, #a060fa 17.25%, #c800cc 58.14%);
   background-repeat: no-repeat;
 
   color: var(--main-white);
@@ -27,7 +33,7 @@ body {
 
 .nav-item {
   box-shadow: inset 0px 4px 0px var(--sec-light-grey-4);
-  color: #9F9E9F;
+  color: #9f9e9f;
 }
 
 .nav-item:hover {
@@ -38,4 +44,15 @@ body {
 .nav-active {
   box-shadow: inset 0px 4px 0px var(--main-orange);
   color: var(--main-orange);
+}
+
+.add-new-product-card {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23313131FF' stroke-width='4' stroke-dasharray='10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.product-card-title {
+  background: var(--gradient-linear, linear-gradient(90deg, #a060fa 22.29%, #c800cc 81.69%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
