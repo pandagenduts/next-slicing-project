@@ -27,6 +27,7 @@ body {
 
 .nav-item {
   box-shadow: inset 0px 4px 0px var(--sec-light-grey-4);
+  color: #9F9E9F;
 }
 
 .nav-item:hover {
