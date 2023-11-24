@@ -36,13 +36,13 @@ export default function Home() {
               className='absolute top-3 right-3 text-[#aa5afa] pointer-events-none'
             />
           </div>
-          <button className='flex gap-2 py-2 px-6 md:py-[10px] md:px-9 border items-center border-secWhite rounded-[4px]'>
+          <button className='h-full flex gap-2 py-2 px-6 md:py-[10px] md:px-9 items-center outline outline-1 outline-secWhite rounded-[4px]'>
             <LiaUploadSolid style={{ width: '16px', height: '16px' }} />
             Import
           </button>
         </header>
 
-        <div className='mb-6 flex items-center overflow-auto rounded-xl bg-mainGrey px-4 py-4 md:px-8 md:py-4 text-sm'>
+        <div className='mb-6 flex items-center overflow-auto rounded-xl bg-mainGrey px-4 py-4 md:px-8 md:py-4 text-sm font-medium'>
           <span className='mr-3'>Category</span>
           <ul className='mr-6 flex gap-3'>
             <li className={categoryClasses}>
@@ -62,6 +62,7 @@ export default function Home() {
             <TbPencil style={{ width: '20px', height: '20px' }} />
           </button>
         </div>
+
         <main className='grid auto-rows-[minmax(0,_2fr)] grid-cols-1 gap-5 min-[450px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-[1151px]:w-[1044px] min-[1151px]:gap-11'>
           <div className='flex cursor-pointer flex-col rounded-xl bg-mainGrey p-4'>
             <h4 className='mb-[13px]'>15.000 NT</h4>

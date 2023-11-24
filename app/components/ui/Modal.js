@@ -29,8 +29,8 @@ export default function Modal(props) {
         onSubmit={handleFormSubmit}
         className='font-poppins flex flex-col gap-[20px]'
       >
-        <section className='flex gap-[20px]'>
-          <div className='flex-1'>
+        <section className='min-[530px]:flex gap-[20px]'>
+          <div className='flex-1 mb-5 min-[530px]:m-0'>
             <label htmlFor='product-name'>Your product name</label>
             <input
               type='text'
@@ -53,7 +53,6 @@ export default function Modal(props) {
 
         <section>
           <label htmlFor='category'>Category</label>
-
           <div className='relative'>
             <select id='category' name='category'>
               <option value=''>
@@ -84,8 +83,8 @@ export default function Modal(props) {
           ></textarea>
         </section>
 
-        <section className='flex gap-4 price'>
-          <div className='flex-1'>
+        <section className='min-[530px]:flex gap-4 price'>
+          <div className='flex-1 mb-5 min-[530px]:m-0'>
             <label htmlFor='price'>
               Price<span className='text-danger'>*</span>
             </label>
@@ -97,7 +96,7 @@ export default function Modal(props) {
                 placeholder='Price'
                 className='pl-12'
               />
-              <span className='absolute top-[11px] left-2'>NT$</span>
+              <span className='absolute top-[9px] left-3'>NT$</span>
             </div>
           </div>
           <div className='flex-1'>
@@ -110,7 +109,7 @@ export default function Modal(props) {
                 placeholder='Discounted Price'
                 className='pl-12'
               />
-              <span className='absolute top-[11px] left-2'>NT$</span>
+              <span className='absolute top-[9px] left-3'>NT$</span>
             </div>
           </div>
         </section>

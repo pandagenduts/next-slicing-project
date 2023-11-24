@@ -27,7 +27,7 @@ export default function ModalWrapper(props) {
           </p>
         </div>
 
-        <div className='bg-[#222] relative px-[38px] py-8'>{children}</div>
+        <div className='bg-[#222] relative px-6 sm:px-[38px] py-8 rounded-lg'>{children}</div>
       </div>
     </div>
   );
