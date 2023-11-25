@@ -1,12 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import AddNewProduct from './components/product-list/AddNewProduct';
-import Modal from './components/ui/Modal';
+import Image from 'next/image';
+import AddNewProduct from '../components/product-list/AddNewProduct';
+import AddProduct from '../components/product-list/AddProduct';
+import Modal from '../components/ui/Modal';
 import { TbPencil } from 'react-icons/tb';
 import { LuSearch } from 'react-icons/lu';
 import { LiaUploadSolid } from 'react-icons/lia';
-
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
 
@@ -41,7 +42,7 @@ export default function Home() {
           </button>
         </header>
 
-        <div className='mb-6 flex items-center overflow-auto rounded-xl bg-mainGrey px-4 py-4 md:px-8 md:py-4 text-sm font-medium'>
+        <div className='mb-3 flex items-center overflow-auto rounded-xl bg-mainGrey px-4 py-4 md:px-8 md:py-4 text-sm font-medium'>
           <span className='mr-3'>Category</span>
           <ul className='mr-6 flex gap-3'>
             <li className={categoryClasses}>
@@ -63,7 +64,25 @@ export default function Home() {
         </div>
 
         <main className='grid auto-rows-[minmax(0,_2fr)] grid-cols-1 gap-5 min-[450px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-[1151px]:w-[1044px] min-[1151px]:gap-11'>
-          <AddNewProduct handleShowModal={handleShowModal} />
+          <div className='flex cursor-pointer flex-col rounded-xl bg-mainGrey p-4'>
+            <h4 className='mb-[13px]'>15.000 NT</h4>
+            <Image
+              src='/Product-1.png'
+              width={196}
+              height={153}
+              alt='Product-Image'
+              className='mb-3 max-h-[153px] w-full rounded-lg object-cover'
+            />
+            <h2 className='product-card-title mb-[13px] font-bold'>
+              Pack of Beer (6pcs of heineken)
+            </h2>
+            <p className='mb-[13px] text-sm'>
+              Heineken lager beer, or known as just Heineken, is one of the pale
+              beers with 5% alcohol.{' '}
+            </p>
+            <span className='block text-sm font-bold'>6pcs</span>
+          </div>
+          <AddProduct handleShowModal={handleShowModal} />
           {showModal && <Modal handleShowModal={handleShowModal} />}
         </main>
       </section>

@@ -9,7 +9,7 @@ export default function NavBar() {
       <Link href="/" className={`${linkClasses} nav-active`}>
         Nightclub Profile
       </Link>
-      <Link href="/" className={`${linkClasses} nav-active`}>
+      <Link href="/page-2" className={`${linkClasses} nav-active`}>
         Featured
       </Link>
       <Link href="/" className={`${linkClasses} nav-active`}>
