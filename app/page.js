@@ -30,7 +30,7 @@ export default function Home() {
       <section className='container'>
         <header className='min-[360px]:flex sm:flex-row justify-between mb-8 gap-4'>
           <div className='relative max-w-[255px] mb-4 min-[360px]:m-0'>
-            <input type='text' placeholder='Search product' className='pr-10' />
+            <input type='text' placeholder='Search product' className='pr-10 placeholder:text-[#898e9a]' />
             <LuSearch
               style={{ width: '20px', height: '20px' }}
               className='absolute top-3 right-3 text-[#aa5afa] pointer-events-none'

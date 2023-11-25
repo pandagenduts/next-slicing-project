@@ -46,15 +46,6 @@ export default function ModalWrapper(props) {
           {/* notification on desktop end */}
         </div>
       </div>
-
-      {/* <div className='p-[20px] mb-4 purple-gradient rounded-lg w-[220px] absolute top-8 left-1/2 translate-x-[330px] hidden min-[1160px]:block'>
-        <h4 className='mb-4 font-bold'>Looking for variant ?</h4>
-        <p className='mb-4 text-sm'>Don&rsquo;t worry!!</p>
-        <p className='text-sm'>
-          size, sugar level, ice level will be unlocked if you already approved
-          by admin.
-        </p>
-      </div> */}
     </div>
   );
 }
