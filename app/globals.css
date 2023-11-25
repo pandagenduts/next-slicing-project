@@ -20,6 +20,24 @@
 }
 
 body {
+  /* background: linear-gradient(
+      2deg,
+      #101010 79.11%,
+      rgba(0, 0, 0, 0) 103.73%,
+      rgba(0, 0, 0, 0) 103.73%
+    ),
+    linear-gradient(174deg, #a060fa 17.25%, #c800cc 58.14%);
+  background-repeat: no-repeat; */
+  background: #111;
+
+  color: var(--main-white);
+}
+
+body.active {
+  overflow: hidden;
+}
+
+#bg-overlay {
   background: linear-gradient(
       2deg,
       #101010 79.11%,
@@ -28,12 +46,6 @@ body {
     ),
     linear-gradient(174deg, #a060fa 17.25%, #c800cc 58.14%);
   background-repeat: no-repeat;
-
-  color: var(--main-white);
-}
-
-body.active {
-  overflow: hidden;
 }
 
 .nav-item {

@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={`${inter.className} ${poppins.variable}`}>
+        <div id='bg-overlay' className='w-full h-[1000px] absolute top-0 left-0 -z-10'></div>
         <main className='min-h-screen'>
           <Header />
           {children}
